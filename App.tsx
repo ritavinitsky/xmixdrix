@@ -98,9 +98,9 @@ const App = () => {
         </View>
       </View>
       <Text style={styles.message}>
-        {winner === X && 'Player X wins!'}
-        {winner === O && 'Player O wins!'}
-        {winner === EMPTY && board.every(cell => cell !== EMPTY) && 'It\'s a tie!'}
+        {winner === X && 'The winner is X!'}
+        {winner === O && 'The winner is O!'}
+        {winner === EMPTY && board.every(cell => cell !== EMPTY) && 'Tie!'}
       </Text>
       <TouchableOpacity style={styles.button} onPress={resetGame}>
         <Text style={styles.buttonText}>New Game</Text>
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   board: {
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: '#000',
   },
   row: {
@@ -139,12 +139,12 @@ const styles = StyleSheet.create({
     height: 80,
   },
   verticalBorder: {
-    borderLeftWidth: 1,
+    borderLeftWidth: 4,
     borderLeftColor: '#000',
     height: '100%',
   },
   horizontalBorder: {
-    borderBottomWidth: 1,
+    borderBottomWidth: 4,
     borderBottomColor: '#000',
   },
   message: {
